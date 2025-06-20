@@ -1,15 +1,8 @@
-import { Move, MovePrimitives } from './move.entity';
-
-export interface DuelMoveInterface {
-  readonly move: Move;
-  readonly turnNumber: number;
-  toPrimitives(): DuelMovePrimitives;
-}
-
-export interface DuelMovePrimitives {
-  move: MovePrimitives;
-  turnNumber: number;
-}
+import { Move } from './move.entity';
+import {
+  DuelMoveInterface,
+  DuelMovePrimitives,
+} from '../interfaces/duel-move.interface';
 
 export class DuelMove implements DuelMoveInterface {
   private constructor(

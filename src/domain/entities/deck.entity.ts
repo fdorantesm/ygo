@@ -1,15 +1,5 @@
-import { DeckCard, DeckCardPrimitives } from './deck-card.entity';
-
-export interface DeckInterface {
-  readonly id: string;
-  cards: DeckCard[];
-  toPrimitives(): DeckPrimitives;
-}
-
-export interface DeckPrimitives {
-  id: string;
-  cards: DeckCardPrimitives[];
-}
+import { DeckCard } from './deck-card.entity';
+import { DeckInterface, DeckPrimitives } from '../interfaces/deck.interface';
 
 export class Deck implements DeckInterface {
   private constructor(

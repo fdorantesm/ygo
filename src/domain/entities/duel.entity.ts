@@ -1,21 +1,7 @@
-import { Turn, TurnPrimitives } from './turn.entity';
-import { DuelEffect, DuelEffectPrimitives } from './duel-effect.entity';
-import { DuelMove, DuelMovePrimitives } from './duel-move.entity';
-
-export interface DuelInterface {
-  readonly id: string;
-  turns: Turn[];
-  effects: DuelEffect[];
-  moves: DuelMove[];
-  toPrimitives(): DuelPrimitives;
-}
-
-export interface DuelPrimitives {
-  id: string;
-  turns: TurnPrimitives[];
-  effects: DuelEffectPrimitives[];
-  moves: DuelMovePrimitives[];
-}
+import { Turn } from './turn.entity';
+import { DuelEffect } from './duel-effect.entity';
+import { DuelMove } from './duel-move.entity';
+import { DuelInterface, DuelPrimitives } from '../interfaces/duel.interface';
 
 export class Duel implements DuelInterface {
   private constructor(

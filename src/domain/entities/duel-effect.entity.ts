@@ -1,15 +1,8 @@
-import { Effect, EffectPrimitives } from './effect.entity';
-
-export interface DuelEffectInterface {
-  readonly effect: Effect;
-  readonly appliedOnTurn: number;
-  toPrimitives(): DuelEffectPrimitives;
-}
-
-export interface DuelEffectPrimitives {
-  effect: EffectPrimitives;
-  appliedOnTurn: number;
-}
+import { Effect } from './effect.entity';
+import {
+  DuelEffectInterface,
+  DuelEffectPrimitives,
+} from '../interfaces/duel-effect.interface';
 
 export class DuelEffect implements DuelEffectInterface {
   private constructor(

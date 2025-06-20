@@ -1,17 +1,9 @@
-import { Card, CardPrimitives } from './card.entity';
-
-export type DeckCardType = 'main' | 'extra' | 'side';
-
-export interface DeckCardInterface {
-  readonly card: Card;
-  readonly deckType: DeckCardType | null;
-  toPrimitives(): DeckCardPrimitives;
-}
-
-export interface DeckCardPrimitives {
-  card: CardPrimitives;
-  deckType?: DeckCardType | null;
-}
+import { Card } from './card.entity';
+import {
+  DeckCardInterface,
+  DeckCardPrimitives,
+} from '../interfaces/deck-card.interface';
+import { DeckCardType } from '../interfaces/deck-card-type.enum';
 
 export class DeckCard implements DeckCardInterface {
   private constructor(

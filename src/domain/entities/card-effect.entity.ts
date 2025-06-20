@@ -1,16 +1,9 @@
-import { Card, CardPrimitives } from './card.entity';
-import { Effect, EffectPrimitives } from './effect.entity';
-
-export interface CardEffectInterface {
-  readonly card: Card;
-  readonly effect: Effect;
-  toPrimitives(): CardEffectPrimitives;
-}
-
-export interface CardEffectPrimitives {
-  card: CardPrimitives;
-  effect: EffectPrimitives;
-}
+import { Card } from './card.entity';
+import { Effect } from './effect.entity';
+import {
+  CardEffectInterface,
+  CardEffectPrimitives,
+} from '../interfaces/card-effect.interface';
 
 export class CardEffect implements CardEffectInterface {
   private constructor(

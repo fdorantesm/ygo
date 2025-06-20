@@ -1,15 +1,4 @@
-export interface PhaseInterface {
-  readonly id: string;
-  readonly name: string;
-  readonly parentPhase?: Phase;
-  toPrimitives(): PhasePrimitives;
-}
-
-export interface PhasePrimitives {
-  id: string;
-  name: string;
-  parentPhase?: PhasePrimitives;
-}
+import { PhaseInterface, PhasePrimitives } from '../interfaces/phase.interface';
 
 export class Phase implements PhaseInterface {
   private constructor(

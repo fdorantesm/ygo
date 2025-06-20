@@ -24,7 +24,7 @@ Each entity exposes three helper methods:
 - `createFromPrimitives`: build an entity from a plain JSON object
 - `toPrimitives`: serialize the entity into primitives for persistence or transport
 
-Along with each class there is a corresponding interface using the `Interface` suffix (e.g. `CardInterface`) that defines its public shape.
+Along with each class there is a corresponding interface using the `Interface` suffix (e.g. `CardInterface`) that defines its public shape. These interfaces live under `src/domain/interfaces`.
 
 ## API
 

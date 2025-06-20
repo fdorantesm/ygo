@@ -1,15 +1,5 @@
-import { Phase, PhasePrimitives } from './phase.entity';
-
-export interface TurnInterface {
-  readonly id: string;
-  phases: Phase[];
-  toPrimitives(): TurnPrimitives;
-}
-
-export interface TurnPrimitives {
-  id: string;
-  phases: PhasePrimitives[];
-}
+import { Phase } from './phase.entity';
+import { TurnInterface, TurnPrimitives } from '../interfaces/turn.interface';
 
 export class Turn implements TurnInterface {
   private constructor(

@@ -1,15 +1,4 @@
-export interface EffectInterface {
-  readonly id: string;
-  readonly name: string;
-  readonly description: string;
-  toPrimitives(): EffectPrimitives;
-}
-
-export interface EffectPrimitives {
-  id: string;
-  name: string;
-  description: string;
-}
+import { EffectInterface, EffectPrimitives } from '../interfaces/effect.interface';
 
 export class Effect implements EffectInterface {
   private constructor(

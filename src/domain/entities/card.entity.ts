@@ -1,17 +1,4 @@
-export interface CardInterface {
-  readonly id: string;
-  name: string;
-  type: string;
-  description?: string;
-  toPrimitives(): CardPrimitives;
-}
-
-export interface CardPrimitives {
-  id: string;
-  name: string;
-  type: string;
-  description?: string;
-}
+import { CardInterface, CardPrimitives } from '../interfaces/card.interface';
 
 export class Card implements CardInterface {
   private constructor(
